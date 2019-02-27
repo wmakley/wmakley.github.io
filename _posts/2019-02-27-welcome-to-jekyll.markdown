@@ -1,25 +1,40 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Publishing a Personal Site!"
 date:   2019-02-27 14:17:16 -0500
-categories: jekyll update
+categories: personal
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+I finally decided it was extremely necessary to make myself a personal site!
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+## The Goal
 
-Jekyll also offers powerful support for code snippets:
+The first thing I did was identify the purpose of this site, which was easy:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+1. Showcase my CV/Resume.
+2. Make me look like a good developer to hire.
+  * Simple and tasteful design.
+  * Blog.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+For my own convenience, I also wanted the following:
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+1. Deploy via `git push`.
+2. No maintenance required.
+
+## What I Went With
+
+### 1. [NameCheap][namecheap]
+
+NameCheap was an easy and obvious choice for domain registration. Its DNS control panel proved painless and included more than enough free "extras" for my needs, such as redirects and email forwarders.
+
+### 2. [ProtonMail][protonmail]
+
+I wanted secure email without Google spying. ProtonMail was currently the most talked-about and obvious choice. It was easy to make it my default provider in NameCheap.
+
+### 3. [GitHub Pages][gh-pages]
+
+I already use Github all the time, so this was a no-brainer. It gives me `git push` deploy convenience, allows me to use a custom domain, and requires absolutely no maintenance on my part. After setting up [Jekyll][jekyll] I have everything I need. Beautiful!
+
+[namecheap]:  https://www.namecheap.com
+[protonmail]: http://protonmail.com/
+[jekyll]:     https://jekyllrb.com/
+[gh-pages]:   https://pages.github.com/
