@@ -1,18 +1,20 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am a full-stack software engineer, with a wide variety of experience in all aspects of software development, especially web applications.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+## Mission Statement
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I believe in understanding my clients' problems at a deep level, so that I can solve them directly and as simply as possible, while building in as much joy into the user experience as possible.
 
+## Primary Areas of Expertise
 
-[jekyll-organization]: https://github.com/jekyll
+* Ruby on Rails
+* Elm
+* JavaScript
+* PostgreSQL
+* Java
+* Web Platform (Incl. popular tools such as Webpack, TypeScript, etc.)
