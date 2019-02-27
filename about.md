@@ -12,9 +12,9 @@ I believe in understanding my clients' problems at a deep level, so that I can s
 
 ## Primary Areas of Expertise
 
-* Ruby on Rails
-* Elm
+* [Ruby on Rails](https://rubyonrails.org/)
+* [Elm](https://elm-lang.org/)
 * JavaScript
-* PostgreSQL
+* [PostgreSQL](https://www.postgresql.org/)
 * Java
-* Web Platform (Incl. popular tools such as Webpack, TypeScript, etc.)
+* Web Platform (Incl. popular tools such as [Webpack](https://webpack.js.org/), [TypeScript](https://www.typescriptlang.org/), etc.)
