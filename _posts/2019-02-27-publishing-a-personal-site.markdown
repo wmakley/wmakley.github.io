@@ -32,7 +32,7 @@ I wanted secure email without Google spying. ProtonMail was currently the most t
 
 ### 3. [GitHub Pages][gh-pages]
 
-I already use Github all the time, so this was a no-brainer. It gives me `git push` deploy convenience, allows me to use a custom domain, and requires absolutely no maintenance on my part. After setting up [Jekyll][jekyll] I have everything I need. Beautiful! There are some services that do the same thing but with more features, such as [Netlify][netlify], that I will consider if I need to do something extra.
+I already use Github all the time, so this was a no-brainer. It gives me `git push` deploy convenience, allows me to use a custom domain, and requires absolutely no maintenance on my part. After setting up [Jekyll][jekyll] I have everything I need. Beautiful!
 
 ## Next Steps
 
@@ -44,4 +44,3 @@ I already use Github all the time, so this was a no-brainer. It gives me `git pu
 [protonmail]: http://protonmail.com/
 [jekyll]:     https://jekyllrb.com/
 [gh-pages]:   https://pages.github.com/
-[netlify]:    https://www.netlify.com/
