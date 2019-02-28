@@ -34,6 +34,12 @@ I wanted secure email without Google spying. ProtonMail was currently the most t
 
 I already use Github all the time, so this was a no-brainer. It gives me `git push` deploy convenience, allows me to use a custom domain, and requires absolutely no maintenance on my part. After setting up [Jekyll][jekyll] I have everything I need. Beautiful!
 
+## Next Steps
+
+* More and better copy.
+* Personal photos.
+* A little bit more flare to the design.
+
 [namecheap]:  https://www.namecheap.com
 [protonmail]: http://protonmail.com/
 [jekyll]:     https://jekyllrb.com/
