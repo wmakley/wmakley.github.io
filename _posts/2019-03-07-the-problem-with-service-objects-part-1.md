@@ -99,6 +99,8 @@ There isn't an easy fix. There is no possible way to check inside the callback i
 
 ## Taking a step back
 
-Where did we go wrong? We missed the fact that the **Parent** *owns* its **Child** objects, and created a `ChildrenController` class that reached in and messed with them, bypassing the parent - even treating the child as "owning" the parent in a way. Because `ChildrenController` existed, adding the callback to `Child` seemed to make total sense! And it worked just fine until we had to implement requirement #2.
+Where did we go wrong? We confused who has ownership of `Child` objects, and created a `ChildrenController` class that reached in and messed with them, bypassing the parent - even treating the child as "owning" the parent in a way. Because `ChildrenController` existed, adding the callback to `Child` seemed to make total sense! And it worked just fine until we had to implement requirement #2.
 
-In Part 2, I will discuss different ways we could use ActiveRecord to solve this problem, and why we may or may not still need the mythical "Service Object".
+Clearly the callback is not a good solution here.
+
+In Part 2, I will discuss different ways we could use Rails and ActiveRecord to solve this problem, and why we may or may not still need the mythical "Service Object".
