@@ -54,7 +54,7 @@ class Child < ApplicationRecord
 end
 ```
 
-So far so good.
+So far so good. We put the rule in the model, so that it should always happen any time a `Child` changes, and we don't have to change any of our code that modifies children.
 
 ### New requirement 2: Allow user to add infinite children directly on the **parent** form.
 
