@@ -105,4 +105,6 @@ Clearly the callback is not a good solution here.
 
 (To be clear, I am NOT blaming the tools. Callbacks can be appropriate in many circumstances, and too much ire has already been directed their way. I am just pointing out how easy it is to use them to write "obvious" code that makes a not-obvious mess.)
 
-In Part 2, I will discuss different ways we could use Rails and ActiveRecord to solve this problem, and why we may or may not still need the mythical "Service Object".
+In [Part 2][next], I will discuss different ways we could use Rails and ActiveRecord to solve this problem, and why we may or may not still need the mythical "Service Object".
+
+[next]: {{ site.baseurl }}{% post_url 2019-03-08-the-problem-with-service-objects-part-2 %}
