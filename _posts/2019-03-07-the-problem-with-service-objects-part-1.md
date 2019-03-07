@@ -38,7 +38,7 @@ So far so good! The problem comes when things start getting complicated.
 
 ### New requirement 1: Update the parent's updated_at timestamp when a child changes.
 
-A trivial example that I've actually had happen. (Let's say that fetching the most recently-updated child is not an option for performance/complexity reasons, and we need to update the parent.)
+A trivial example that I've actually had happen. (Let's say that just fetching the most recently-updated child and using its updated_at value is not an option for performance/complexity reasons.)
 
 **Obvious callback solution:**
 
