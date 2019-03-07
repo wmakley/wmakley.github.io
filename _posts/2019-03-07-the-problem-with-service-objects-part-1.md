@@ -103,4 +103,6 @@ Where did we go wrong? We confused who has ownership of `Child` objects, and cre
 
 Clearly the callback is not a good solution here.
 
+(To be clear, I am NOT blaming the tools. Callbacks can be appropriate in many circumstances, and too much ire has already been directed their way. I am just pointing out how easy it is to use them to write "obvious" code that makes not-obvious mess.)
+
 In Part 2, I will discuss different ways we could use Rails and ActiveRecord to solve this problem, and why we may or may not still need the mythical "Service Object".
