@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Problem With Service Objects Part 1: \"Why We Need Them\""
+title: "The Problem With Service Objects Part 1: \"Where ActiveRecord Can Suggest Bad Choices\""
 date: "2019-03-07"
 categories: rails
 ---
