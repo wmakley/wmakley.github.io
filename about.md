@@ -18,3 +18,9 @@ I believe in understanding my clients' problems at a deep level, so that I can s
 * [PostgreSQL](https://www.postgresql.org/)
 * Java
 * Web Platform (Incl. popular tools such as [Webpack](https://webpack.js.org/), [TypeScript](https://www.typescriptlang.org/), etc.)
+
+## Resume / CV
+
+[Download as PDF][resume]
+
+[resume]: /assets/pdf/William-Makley-Resume.pdf
