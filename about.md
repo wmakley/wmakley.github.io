@@ -28,15 +28,15 @@ The kinds of projects I have worked on include:
 
 • An application to track all stages of luxury home construction (sales / pre-construction / construction / warranty), and generate detailed progress reports. Includes CRM, price book, contract creation/printing, notifications, tasking, design tools, logging, customer satisfaction, and detailed progress tracking.
 
-• Large Ruby on Rails E-Commerce sites with payment gateway integration, complex pricing, attractive user experiences, and continuous data import and export.
-
-• Document portal for company to upload documents for their customers. Includes detailed permissions, tagging, searching, multiple customers, and SFTP drop box.
+• E-Commerce sites with payment gateway integration, complex pricing, attractive user experiences, and continuous data import and export.
 
 • Veterinary practice management application, with Java/Firebird back-end, and web-based front-end in JavaScript using the Dojo framework. Includes customer and patient tracking, inventory, appointments, rabies certificates, and numerous reports.
 
-• Upgrading a large mission-critical Rails 1 codebase to Rails 5, using automated testing to ensure a smooth migration.
+• Upgrading a large mission-critical Rails 1.2 codebase to Rails 5.
 
 • Numerous custom content management systems, and [RefineryCMS][refinerycms]-based sites with custom modules.
+
+Additionally, I have been involved with the deployment and hosting of almost all projects I have worked on. I have extensive experience with configuring and administering Linux servers.
 
 ## Technologies
 
@@ -44,9 +44,12 @@ The kinds of projects I have worked on include:
 * JavaScript
 * Java, Java EE, Servlets, JSP
 * C#/.NET
+* Apache
+* Bash / Shell scripting
 * [Elm][elmlang]
 * [FirebirdSQL][firebird]
 * [MySQL][mysql]
+* Passenger
 * [PostgreSQL][postgres]
 * [Python][python]
 * [React][react]
