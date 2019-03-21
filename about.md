@@ -42,18 +42,18 @@ The kinds of projects I have worked on include:
 
 * [Ruby on Rails][rails]
 * JavaScript
-* [React][react]
-* [Elm][elmlang]
-* [Webpack][webpack]
-* [TypeScript][typescript]
 * Java, Java EE, Servlets, JSP
 * C#/.NET
-* [Python][python]
-* [PostgreSQL][postgres]
-* [MySQL][mysql]
+* [Elm][elmlang]
 * [FirebirdSQL][firebird]
+* [MySQL][mysql]
+* [PostgreSQL][postgres]
+* [Python][python]
+* [React][react]
+* [TypeScript][typescript]
+* [Webpack][webpack]
 
-In addition, I have some experience with Cocoa, Objective-C and iOS development, Windows Forms, PHP, MongoDB, and even Oracle.
+In addition, I have some experience with C++, Cocoa, Objective-C and iOS development, Windows Forms, PHP, MongoDB, and even Oracle! I've always loved graphics programming, and will take any opportunity to try it.
 
 ## Resume / CV
 
