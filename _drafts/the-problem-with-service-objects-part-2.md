@@ -101,5 +101,5 @@ Our application isn't a "Parent" or "Child", it is a great big ball of parents a
 
 [railsguide]: https://guides.rubyonrails.org/
 [belongs_to]: https://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html#method-i-belongs_to
-[next]: {{ site.baseurl }}{% post_url 2019-03-20-the-problem-with-service-objects-part-2 %}
+[next]: {{ site.baseurl }}
 [previous]: {{ site.baseurl }}{% post_url 2019-03-07-the-problem-with-service-objects-part-1 %}

@@ -4,7 +4,7 @@ title: "The Problem With Service Objects Part 3: \"Why Service Objects\""
 date: "2019-03-20"
 categories: rails
 ---
-In the [previous post][previous], we went over various ActiveRecord solutions to orchestrating multiple models, and why they all fail to please. In this post I will show how and why we arrive at service objects.
+In the previous post, we went over various ActiveRecord solutions to orchestrating multiple models, and why they all fail to please. In this post I will show how and why we arrive at service objects.
 
 ## What is a web application?
 
@@ -12,4 +12,4 @@ In the [previous post][previous], we went over various ActiveRecord solutions to
 
 
 [railsguide]: https://guides.rubyonrails.org/
-[previous]: {{ site.baseurl }}{% post_url 2019-03-08-the-problem-with-service-objects-part-2 %}
+[previous]: {{ site.baseurl }}
