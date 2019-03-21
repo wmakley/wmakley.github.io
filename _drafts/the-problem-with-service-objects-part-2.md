@@ -5,7 +5,7 @@ date: "2019-03-08"
 categories: rails
 ---
 
-In the [previous post][previous], we discussed a common architectural pitfall in Rails apps: creating "cycles" and loops using callbacks to make related records update each other. In this post I will discuss some possible solutions, staying inside the bounds of things you learn from the [Rails Guide][railsguide].
+In the [previous post][previous], we discussed a common architectural pitfall in Rails apps: creating "cycles" and loops using callbacks to make related records update each other. In this post I will discuss some possible solutions, staying inside the bounds of things you learn from the [Rails Guide][railsguide]. I've tried all of these in the past in various production applications, and have discovered the pros and cons firsthand.
 
 Before I begin, I would like to point out that I was recently reminded that [ActiveRecord actually has a "touch" option for `#belongs_to`][belongs_to]. I would suggest using it normally. I feel that my example can stand in for any number of situations that ActiveRecord does **not** have an option for (and I'm curious if said option will trigger 20 parent updates when inserting 20 children at once).
 
@@ -101,4 +101,5 @@ Our application isn't a "Parent" or "Child", it is a great big ball of parents a
 
 [railsguide]: https://guides.rubyonrails.org/
 [belongs_to]: https://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html#method-i-belongs_to
+[next]: {{ site.baseurl }}{% post_url 2019-03-20-the-problem-with-service-objects-part-2 %}
 [previous]: {{ site.baseurl }}{% post_url 2019-03-07-the-problem-with-service-objects-part-1 %}
