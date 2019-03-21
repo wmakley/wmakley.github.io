@@ -42,16 +42,16 @@ The kinds of projects I have worked on include:
 
 * [Ruby on Rails][rails]
 * JavaScript
-* React
+* [React][react]
 * [Elm][elmlang]
 * [Webpack][webpack]
 * [TypeScript][typescript]
-* Java / JSP
+* Java, Java EE, Servlets, JSP
 * C#/.NET
-* Python
+* [Python][python]
 * [PostgreSQL][postgres]
-* MySQL
-* FirebirdSQL
+* [MySQL][mysql]
+* [FirebirdSQL][firebird]
 
 In addition, I have some experience with Cocoa, Objective-C and iOS development, Windows Forms, PHP, MongoDB, and even Oracle.
 
@@ -67,3 +67,7 @@ In addition, I have some experience with Cocoa, Objective-C and iOS development,
 [postgres]: https://www.postgresql.org/
 [webpack]: https://webpack.js.org/
 [typescript]: https://www.typescriptlang.org/
+[mysql]: https://www.mysql.com/
+[firebird]: https://firebirdsql.org/
+[react]: https://reactjs.org/
+[python]: https://www.python.org/
