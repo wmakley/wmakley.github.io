@@ -20,15 +20,25 @@ Self-motivated and experienced software engineer with a wide variety of experien
 
 • Continually improving my skills, learning new technologies and best practices, and using the best tool for the job. (Recently I have enjoyed learning Elm, Go, and TypeScript.)
 
-• Simple and maintainable code.
+• Simple, maintainable, and performant code.
 
 ## Experience
 
 The kinds of projects I have worked on include:
 
+• An application to track all stages of luxury home construction (sales / pre-construction / construction / warranty), and generate detailed progress reports. Features include CRM, price book, building and printing contracts, notifications, tasking, design tools, logging, customer satisfaction, and detailed progress tracking.
 
+• Large Ruby on Rails E-Commerce sites with secure payment gateway integration, complex pricing logic, attractive user experiences, and continuous product data import and export.
 
-## Primary Areas of Expertise
+• Document portal for company to upload documents for their customers. Detailed permissions, tagging, searching, multiple customers, and SFTP drop box.
+
+• Veterinary practice management application, with Java/Firebird back-end, and web-based front-end in JavaScript using the Dojo framework. Includes customer and patient tracking, inventory, appointments, rabies certificates, and numerous reports.
+
+• Upgrading a large mission-critical Rails 1 codebase to Rails 5, using automated testing to ensure a smooth migration.
+
+• Numerous custom content management systems, and [RefineryCMS][refinerycms]-based sites.
+
+## Technologies
 
 * [Ruby on Rails](https://rubyonrails.org/)
 * [Elm](https://elm-lang.org/)
@@ -41,4 +51,6 @@ The kinds of projects I have worked on include:
 
 [Download as PDF][resume]
 
+
+[refinerycms]: https://www.refinerycms.com/
 [resume]: /assets/pdf/William-Makley-Resume.pdf
