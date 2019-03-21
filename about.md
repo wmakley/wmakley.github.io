@@ -16,7 +16,7 @@ Self-motivated and experienced software engineer with a wide variety of experien
 
 • Many years of experience and a deep level of expertise with Ruby on Rails and similar web frameworks, especially Java EE, PHP, and Python/Django.
 
-• Working with and refactoring challenging legacy code, using test-driven techniques.
+• Working with challenging legacy code, using test-driven techniques.
 
 • Continually improving my skills, learning new technologies and best practices, and using the best tool for the job. (Recently I have enjoyed learning Elm, Go, and TypeScript.)
 
@@ -26,31 +26,44 @@ Self-motivated and experienced software engineer with a wide variety of experien
 
 The kinds of projects I have worked on include:
 
-• An application to track all stages of luxury home construction (sales / pre-construction / construction / warranty), and generate detailed progress reports. Features include CRM, price book, building and printing contracts, notifications, tasking, design tools, logging, customer satisfaction, and detailed progress tracking.
+• An application to track all stages of luxury home construction (sales / pre-construction / construction / warranty), and generate detailed progress reports. Includes CRM, price book, contract creation/printing, notifications, tasking, design tools, logging, customer satisfaction, and detailed progress tracking.
 
-• Large Ruby on Rails E-Commerce sites with secure payment gateway integration, complex pricing logic, attractive user experiences, and continuous product data import and export.
+• Large Ruby on Rails E-Commerce sites with payment gateway integration, complex pricing, attractive user experiences, and continuous data import and export.
 
-• Document portal for company to upload documents for their customers. Detailed permissions, tagging, searching, multiple customers, and SFTP drop box.
+• Document portal for company to upload documents for their customers. Includes detailed permissions, tagging, searching, multiple customers, and SFTP drop box.
 
 • Veterinary practice management application, with Java/Firebird back-end, and web-based front-end in JavaScript using the Dojo framework. Includes customer and patient tracking, inventory, appointments, rabies certificates, and numerous reports.
 
 • Upgrading a large mission-critical Rails 1 codebase to Rails 5, using automated testing to ensure a smooth migration.
 
-• Numerous custom content management systems, and [RefineryCMS][refinerycms]-based sites.
+• Numerous custom content management systems, and [RefineryCMS][refinerycms]-based sites with custom modules.
 
 ## Technologies
 
-* [Ruby on Rails](https://rubyonrails.org/)
-* [Elm](https://elm-lang.org/)
+* [Ruby on Rails][rails]
 * JavaScript
-* [PostgreSQL](https://www.postgresql.org/)
-* Java
-* Web Platform (Incl. popular tools such as [Webpack](https://webpack.js.org/), [TypeScript](https://www.typescriptlang.org/), etc.)
+* React
+* [Elm][elmlang]
+* [Webpack][webpack]
+* [TypeScript][typescript]
+* Java / JSP
+* C#/.NET
+* Python
+* [PostgreSQL][postgres]
+* MySQL
+* FirebirdSQL
+
+In addition, I have some experience with Cocoa, Objective-C and iOS development, Windows Forms, PHP, MongoDB, and even Oracle.
 
 ## Resume / CV
 
 [Download as PDF][resume]
 
 
+[rails]: https://rubyonrails.org/
 [refinerycms]: https://www.refinerycms.com/
 [resume]: /assets/pdf/William-Makley-Resume.pdf
+[elmlang]: https://elm-lang.org/
+[postgres]: https://www.postgresql.org/
+[webpack]: https://webpack.js.org/
+[typescript]: https://www.typescriptlang.org/
