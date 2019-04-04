@@ -91,9 +91,9 @@ end
 Uh oh, all we did was do things the most obvious way, and now our form is completely broken! Here are some of the bugs:
 
 1. If a child is invalid, the form will re-render but not display an error message.
-2. The parent will be "touched" by every child's callback.
+2. The parent will be updated by every child's callback.
 
-To solve the first bug, we could always use `accepts_nested_attributes_for` and `fields_for`, but we'll ignore that magical mess for now. **The real issue is bug #2.** Consider an application with thousands of "children", or non-trivial work in the child's callback, or - **even worse** - an application where the parent runs its own callback after it has been "touched" by its children: This could be a *massive* amount of wasted trips to the database, or even an infinite loop.
+To solve the first bug, we could always use `accepts_nested_attributes_for` and `fields_for`, but we'll ignore that magical mess for now. **The real issue is bug #2.** Consider an application with thousands of "children", or non-trivial work in the child's callback, or - **even worse** - an application where the parent runs its own callback after it has been updated by its children: This could be a *massive* amount of wasted trips to the database, or even an infinite loop.
 
 There isn't an easy fix. There is no possible way to check inside the callback if the parent was *"just saved"*, and turning *off* the callback during the "create" action is just an even bigger mess. **So we did something completely wrong architecturally, but ActiveRecord callbacks made it seem right at first.**
 
