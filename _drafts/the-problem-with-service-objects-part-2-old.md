@@ -5,7 +5,7 @@ date: "2019-03-08"
 categories: rails
 ---
 
-In the [previous post][previous], we discussed a common architectural pitfall in Rails apps: creating "cycles" and loops using callbacks to make related records update each other. In this post I will discuss some possible solutions, staying inside the bounds of things you learn from the [Rails Guide][railsguide]. I've tried all of these in the past in various production applications, and have discovered the pros and cons firsthand.
+In the [previous post][previous], we discussed a common architectural pitfall in Rails apps: creating "cycles" and loops using callbacks to make related records update each other. In this post I will discuss some possible solutions, staying inside the bounds of things you learn from the [Rails Guide][railsguide]. I've tried all of these in the past in various production applications.
 
 Before I begin, I would like to point out that I was recently reminded that [ActiveRecord actually has a "touch" option for `#belongs_to`][belongs_to]. I would suggest using it normally. I feel that my example can stand in for any number of situations that ActiveRecord does **not** have an option for (and I'm curious if said option will trigger 20 parent updates when inserting 20 children at once).
 
@@ -33,8 +33,8 @@ inside a database transaction.
 
 ### Cons:
 
-* Actually increases the complexity of the controller a lot if you do the full-blown database transaction. At that point we are really exceeding the purview of a controller.
-* We want this to happen any time a Child is updated for any reason, but it will only happen if the user hits this specific controller. A recipe for future development mistakes.
+* Actually increases the complexity of the controller a lot if you do the full-blown database transaction. At that point we are definitely exceeding the purview of a controller.
+* We want this to happen any time a Child is updated for any reason, but it will only happen if the user hits this specific controller - a recipe for future development mistakes.
 
 
 ## Idea 2: Controller code can never modify a Child directly, only the Parent can do that.
@@ -85,13 +85,13 @@ We could even always join parents with their most recently-updated child with so
 
 ### Cons:
 
-* A recipe for N+1 queries.
-* Not really any less work, will have subtle bugs.
+* Easy to create N+1 queries.
+* More difficult to implement.
 * Could potentially be slow with large data sets unless you do some work in the database to optimize it.
 
 ### Conclusion:
 
-In most real-world applications, there will be a strong case for just updating the column on the parent, to keep the database querying simple. You do not want to be fetching every single thing related to the parent in order to compute a single property of it.
+In most real-world applications there will be a strong case for just updating the column on the parent in order to keep the database querying simple. You do not want to be fetching every single thing related to the parent in order to compute a single property of it.
 
 ## Why are none of these ideas making us happy?
 
