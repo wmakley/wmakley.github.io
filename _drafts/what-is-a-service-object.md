@@ -24,6 +24,7 @@ A good service object should:
 2. Handle failure cases clearly and concisely.
 3. Assist with orchestrating complex relational data.
 4. Keep side effects contained and clearly labeled.
+5. Provide benefits that exceed the added complexity of an entirely new layer.
 
 
 ## 1. Be the single obvious piece of code to change with regard to its function.
@@ -83,7 +84,19 @@ I really like how Trailblazer suggests creating `app/concepts/task/operation/ass
 
 The ability to clearly and concisely handle complex failure cases within database transactions is where service objects have the potential to really shine compared to ActiveRecord. Don't get me wrong, [`ActiveModel::Validations`][am-validations] is great for simple use cases, but it is absolutely terrible if you need to save multiple models at once. [`#accepts_nested_attributes_for` and `#fields_for`][nested-attrs] are hilariously difficult to work with and &mdash; having become an expert at them over many years &mdash; I recommend pretending they don't exist (unless you are desperate).
 
+Our original service has some serious issues which we can fix because we split it off:
 
+```ruby
+class TaskAssignment
+  def self.assign!(task)
+    task.save!
+    TaskMailer.with(task: task).assignment_email.deliver_now
+  end
+end
+```
+
+1. Throws an exception.
+2. 
 
 
 [previous]: {{ site.baseurl }}{% post_url 2019-03-07-the-problem-with-service-objects-part-1 %}
