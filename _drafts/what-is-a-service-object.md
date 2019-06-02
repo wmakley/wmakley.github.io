@@ -4,9 +4,9 @@ title: "Just use a service object?"
 date: "2019-03-20"
 categories: rails
 ---
-In the [previous post][previous], I covered a common problem with callbacks in Rails applications: order of operations issues when you have spiderwebs of records modifying each other. This is the point at which many experienced developers on the Internet will give the advice: "Use a service object!"
+In the [previous post][previous], I covered a common problem with callbacks in Rails applications: order of operations issues when you have spiderwebs of records modifying each other. This is the point at which many experienced developers on the Internet will give the advice: "Use a service object!" I am skeptical of this advice because it lacks almost all relevant detail. In this post I am going to enumerate what I think makes a service object, and whether you should use them at all.
 
-## WTF is a service object?
+## What is a service object?
 
 The main issue with the "service object" is that everyone's definition is different. Here are a few examples I have seen in the wild:
 
@@ -16,18 +16,19 @@ The main issue with the "service object" is that everyone's definition is differ
 
 ## Which one do I pick?
 
-You need to take a step back and think about the big picture. At the end of the day, a web application is a bundle of state to be mutated by HTTP requests. **A service object is a piece of code that performs a single logical mutation of that state.**
+You need to take a step back and think about the big picture. Forget about Rails. At the end of the day, a web application is a bundle of state to be mutated by HTTP requests. **A service object is a piece of code that facilitates a single logical user interaction with that state.**
 
 A good service object should:
 
 1. **Be the single obvious piece of code to change with regard to its function.**
 2. Handle failure cases clearly and concisely.
-3. Assist with orchestrating complex relational data.
+3. Assist with orchestrating lower-level services, such as the database.
 4. Keep side effects contained and clearly labeled.
-5. Provide benefits that exceed the added complexity of an entirely new layer.
 
 
 ## 1. Be the single obvious piece of code to change with regard to its function.
+
+
 
 Service objects can be surprising in a Rails code-base. ActiveRecord is expected to do most of the heavy lifting, and `app/models` will be the first place other developers look when trying to understand your code. **If you are going to use service objects, they need to be clearly visible.**
 

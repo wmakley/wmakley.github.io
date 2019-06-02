@@ -60,12 +60,13 @@ In addition, I have some experience with C++, Cocoa, Objective-C and iOS develop
 
 ## Resume / CV
 
-[Download as PDF][resume]
+[Download as PDF][resume-pdf] \| [Microsoft Word][resume-docx]
 
 
 [rails]: https://rubyonrails.org/
 [refinerycms]: https://www.refinerycms.com/
-[resume]: /assets/pdf/William-Makley-Resume.pdf
+[resume-pdf]: /assets/pdf/William-Makley-Resume.pdf
+[resume-docx]: /assets/docx/William-Makley-Resume.docx
 [elmlang]: https://elm-lang.org/
 [passenger]: https://www.phusionpassenger.com/
 [postgres]: https://www.postgresql.org/
