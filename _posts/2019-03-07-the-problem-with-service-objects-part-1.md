@@ -11,7 +11,7 @@ Since I started working on Rails applications, I have been trying to find the id
 
 Skip this post if you are familiar with the pitfalls of ActiveRecord.
 
-Almost any monolith eventually grows in complexity to the point where any given user interaction could affect numerous tables and have a large number of "side effects" on the application state, or really what I call **"desired ancillary effects"**. If you naively use ActiveRecord to handle all form submissions, using callbacks and "concerns" organically as needed, you eventually run into some well-known issues.
+Almost any monolith eventually grows in complexity to the point where any given user interaction could affect numerous tables and have a large number of "side effects" on the application state, or really what I call **"desired effects"**. We wouldn't be writing these if we didn't want them! If you naively use ActiveRecord to handle all form submissions, using callbacks and "concerns" organically as needed, you eventually run into some well-known issues.
 
 ## Callbacks can create "order of operations" problems when dealing with multiple related models.
 
