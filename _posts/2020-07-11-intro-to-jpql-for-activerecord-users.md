@@ -33,17 +33,17 @@ Here are the JPA choices for achieving the same result that I will discuss:
 
 Here are the choices I will *not* discuss, because they are an over-complicated waste of time:
 
-* Criteria Query API (Google it yourself and cry)
+* Criteria Query API (google it yourself and cry)
 
 **Already you may be asking:** Why do we need three separate APIs, with three separate blog posts? This is a very good question!!! If you have an answer as to why this sucks so much, please [let me know][me]!
 
 ## What is JPQL?
 
-JPQL is an SQL-like language for querying entities (not tables), defined by the JPA specification.
+JPQL is an SQL-like language for querying objects/entities (not tables), defined by the JPA specification. It is the lowest-level interface for loading entities, and typically featured in the most basic examples.
 
-Yes, you read that correctly: **entities, not tables**.
+Let me repeat: **objects, not tables**.
 
-## Detour: Getting an Entity Manager instance
+## Detour: Getting an EntityManager instance
 
 Before we can do anything with JPQL, we need an instance of the EntityManager. In Spring Boot you can have this auto-injected into your class as follows:
 
@@ -70,7 +70,7 @@ for (Contact contact : contacts) {
 }
 ```
 
-Not too bad, right? You might be thinking it looks type-safe, fairly intuitive, and succinct.
+Not too bad, right? You might be thinking it looks type-safe, fairly intuitive, and succinct (as much as Java ever can be).
 
 ### Lazy Loading
 
