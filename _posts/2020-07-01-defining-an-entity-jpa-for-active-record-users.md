@@ -151,6 +151,6 @@ In Hibernate/JPA, the Entity is a dumb container of data. You must ask the frame
 
 In ActiveRecord, the model class itself contains all of the querying, persistence rules, and even business logic (by default). It works very hard to save you from having to repeat yourself, or manually define boring stuff such as the schema (which it will go and discover for you, like a helpful servant).
 
-In my opinion, history bears out that there is nothing intrinsically wrong with either approach. Honestly as a Ruby guy I have to admit the Java way of working is architecturally clean. Large ActiveRecord models can easily become quite confusing and encompass too many concerns. **Where things go wrong for JPA+Hibernate is in the details.**
+In my opinion, history bears out that there is nothing intrinsically wrong with either approach. Honestly as a Ruby guy I have to admit the JPA way of working is architecturally clean. Large ActiveRecord models can easily become quite confusing and encompass too many concerns. **Where things go wrong for JPA+Hibernate is in the details.**
 
 [hanami]: https://hanamirb.org/
