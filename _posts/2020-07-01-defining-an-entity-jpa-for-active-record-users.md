@@ -141,6 +141,17 @@ public class Contact {
 }
 ```
 
+### Lazy Loading
+
+As in ActiveRecord, associations are lazily-loaded by default. Unlike ActiveRecord, you have the option to eager load all the time:
+
+```java
+@ManyToOne( fetch = FetchType.EAGER )
+private Client client;
+```
+
+**This is as terrible of an idea as it sounds, and is to be avoided as much as possible.** Why would anyone want to effectively force anyone loading Contacts to also pre-load the Client, even if they don't need it? It is as big of an anti-feature as "default_scope" in ActiveRecord. Ugh ugh ugh. You see it documented everywhere as though it is something sane people might choose to do. **DO NOT USE THIS!!!**
+
 ## Conclusion
 
 The difference in verbosity is always funny (seriously, who would rather write the Java class?), but that really isn't the point I want to get across here.
@@ -153,4 +164,7 @@ In ActiveRecord, the model class itself contains all of the querying, persistenc
 
 In my opinion, history bears out that there is nothing intrinsically wrong with either approach. Honestly as a Ruby guy I have to admit the JPA way of working is architecturally clean. Large ActiveRecord models can easily become quite confusing and encompass too many concerns. **Where things go wrong for JPA+Hibernate is in the details.**
 
+## Up Next: [Querying Entities with JPQL][next]
+
 [hanami]: https://hanamirb.org/
+[next]: {{ site.baseurl }}{% post_url 2020-07-11-intro-to-jpql-for-activerecord-users %}
