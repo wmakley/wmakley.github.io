@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Intro to JPQL for ActiveRecord Users"
-date: 2020-07-01
+date: 2020-07-11
 categories: ["jpa", "spring", "java", "hibernate"]
 ---
 
