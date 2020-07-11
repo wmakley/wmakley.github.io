@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-<img src="/assets/img/avatar.jpg" alt="William Makley" class="avatar" width="400" height="487">
+<img src="/assets/img/avatar.jpg" alt="William Manahan-Makley" class="avatar" width="400" height="487">
 
 Self-motivated and experienced software engineer with a wide variety of experience in all aspects of software development, especially web applications. I love my family, making things, using my skills to help others, learning new technologies and professional practices, and Yoga.
 
