@@ -41,7 +41,7 @@ Here are the choices I will *not* discuss, because they are an over-complicated 
 
 JPQL is an SQL-like language for querying entities (not tables), defined by the JPA specification.
 
-Yes you read that correctly: **entities, not tables**.
+Yes, you read that correctly: **entities, not tables**.
 
 ## Detour: Getting an Entity Manager instance
 
@@ -83,7 +83,7 @@ for (Contact contact : contacts) {
 }
 ```
 
-As you might expect, the Client object will be lazily loaded. How you ask? The Contacts are actually wrapped by "proxy" objects that do the lazy loading. `getClient()` also returns a proxy, which only actually goes to the database if you call a method such as `client.getId()`. (This is yet another piece of Hibernate magic that doesn't seem possible in the Java type system, but there you are.)
+As you might expect, the Client object will be lazily loaded. How, you ask? The Contacts are actually wrapped by "proxy" objects that do the lazy loading. `getClient()` returns a proxy, which only goes to the database if you call a method such as `client.getId()`. (This is yet another piece of Hibernate magic that doesn't seem possible in the Java type system, but there you are.)
 
 This could be a whole blog post itself, so we will leave it at that for now.
 
@@ -125,7 +125,7 @@ JPQL will figure out the joins for you, and has a special "fetch" keyword to sig
 
 I think JPQL is ridiculous. It combines all the downsides of writing SQL by hand with all the downsides of writing in a language that *looks* like SQL, but isn't actually SQL. I have lost count of the number of things I thought should work, but didn't, and the number of utterly incomprehensible *runtime* error messages I have had to google. One of the main things I want from Java (in exchange for increased verbosity) is compile-time type-safety. JPQL takes it away. :(
 
-I also find the entire idea of thinking in objects instead of tables to be mind-boggling. No wonder everyone has been complaining about the "object-relational impedence mismatch" for years, going so far as to call it ["the Vietnam of Computer Science"][vietnam] in some cases.
+I also find the entire idea of thinking in objects instead of tables to be mind-boggling. No wonder everyone has been complaining about the "object-relational impedence mismatch" for years, going so far as to call it "[the Vietnam of Computer Science][vietnam]" in some cases.
 
 How does ActiveRecord not fall into this trap? It provide a simple API that *helps you to write lots of syntactically correct SQL quickly and succinctly*, instead of forcing you to learn a new object-querying language.
 
