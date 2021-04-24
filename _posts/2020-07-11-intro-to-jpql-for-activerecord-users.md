@@ -104,7 +104,7 @@ List<Contact> contacts = entityManager.createQuery(
 
 JPQL will figure out the joins for you, and has a special "fetch" keyword to signify pre-loading. You also have to reference "client" as a property of "contact": `c.client`. Again, in this query language we are dealing with entities, not tables.
 
-> Aside: The blogosphere on avoiding N+1 issues in JPA seems woefully lacking. Many posts treat the reader like they are five years old, and maybe aren't ready to tackle such "complex" issues, or spend pages beating about the bush. Documentation rarely offers straightforward solutions to common problems. **Note that ActiveRecord's `.includes(...)` method is obvious and easy to use, and may be explained in five seconds.** This is typical. Do I sound frustrated?
+> Aside: The blogosphere on avoiding N+1 issues in JPA seems woefully lacking. Many posts treat the reader like they are five years old, and maybe aren't ready to tackle such "complex" issues, or spend pages beating about the bush. Documentation rarely offers straightforward solutions that work in every circumstance. **Note that ActiveRecord's `.includes(...)` method is obvious and easy to use, and may be explained in five seconds.** This is typical. Do I sound frustrated?
 
 ## When to use it
 
@@ -117,17 +117,39 @@ JPQL will figure out the joins for you, and has a special "fetch" keyword to sig
 
 ## Comparison to ActiveRecord
 
-* `ActiveRecord::Relations` are chainable and composable (see example in introduction). JPQL is not (hence why it is bad for searches).
+* `ActiveRecord::Relations` are chain-able and composable (see example in introduction). JPQL is not (hence why it is bad for searches).
 * If you want to pre-load any relationships, you will need to specify the join type (left, inner, outer, cross, etc.).
 * `JOIN FETCH` actually does a join. ActiveRecord `#includes(...)` will usually result in a separate query.
 
+## Useful Tricks
+
+Don't ask me how this works, but it can be handy:
+
+```java
+class ContactIdAndName {
+  public final Long id;
+  public final String lastName;
+
+  public ContactIdAndName( Long id, String lastName ) {
+    this.id = id;
+    this.lastName = lastName;
+  }
+}
+
+List<ContactIdAndName> contacts = entityManager.createQuery(
+    "SELECT new com.mycompany.ContactIdAndName(c.id, c.lastName) FROM Contact c"
+    ContactIdAndName.class
+  )
+  .getResultList();
+```
+
+If you have ever used Java reflection API to instantiate objects, you know how much code this is saving. This is the only feature of JPQL that I have found particularly exciting.
+
 ## What I think
 
-I think JPQL is ridiculous. It combines all the downsides of writing SQL by hand with all the downsides of writing in a language that *looks* like SQL, but isn't actually SQL. I have lost count of the number of things I thought should work, but didn't, and the number of utterly incomprehensible *runtime* error messages I have had to google. One of the main things I want from Java (in exchange for increased verbosity) is compile-time type-safety. JPQL takes it away. :(
+I am not sure why anyone bothered to create JPQL. It combines all the downsides of writing SQL by hand with all the downsides of writing in a language that *looks* like SQL, but isn't actually SQL. I have lost count of the number of things I thought should work, but didn't, and the number of utterly incomprehensible *runtime* error messages I have had to Google. One of the main things I want from Java (in exchange for increased verbosity) is compile-time type-safety. JPQL takes it away. :(
 
-I also find the entire idea of thinking in objects instead of tables to be mind-boggling. No wonder everyone has been complaining about the "object-relational impedence mismatch" for years, going so far as to call it "[the Vietnam of Computer Science][vietnam]" in some cases.
-
-How does ActiveRecord not fall into this trap? It provide a simple API that *helps you to write lots of syntactically correct SQL quickly and succinctly*, instead of forcing you to learn a new object-querying language.
+I also find the entire idea of thinking in objects instead of tables to be mind-boggling. Like, why is maintaining that layer of abstraction so sacred we need to invent a language on top of SQL? It seems farcical. No wonder everyone has been complaining about the "object-relational impedence mismatch" for years, going so far as to call it "[the Vietnam of Computer Science][vietnam]".
 
 Unfortunately JPQL is unavoidable, and most things you do with JPA will hearken back to it in some way. Sigh.
 
