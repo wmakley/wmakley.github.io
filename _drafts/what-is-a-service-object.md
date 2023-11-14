@@ -4,7 +4,7 @@ title: "Just use a service object?"
 date: "2019-03-20"
 categories: ["java", "orms", "activerecord", "hibernate", "rails"]
 ---
-In the [previous post][previous], I covered a common problem with callbacks in Rails applications: order of operations issues when you have spiderwebs of records modifying each other. This is the point at which many experienced developers on the Internet will give the advice: "Use a service object!" The problem with this advice because it lacks almost any relevant details. In this post I am going to enumerate what I think makes a good service object, and whether you should use them at all.
+In the [previous post][previous], I covered a common problem with callbacks in Rails applications: order of operations issues when you have spiderwebs of records modifying each other. This is the point at which many experienced developers on the Internet will give the advice: "Use a service object!" The problem with this advice is it lacks almost any relevant details. In this post I am going to enumerate what I think makes a good service object, and whether you should use them at all.
 
 ## What is a service object?
 
@@ -49,7 +49,7 @@ end
 class TaskAssignment
   def call(task)
     task.save or return false
-    TaskMailer.with(task: task).assignment_notification.deliver_now
+    TaskMailer.with(task: task).assignment_notification.deliver_later
   end
 end
 ```

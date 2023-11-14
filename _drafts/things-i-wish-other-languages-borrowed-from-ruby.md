@@ -28,7 +28,7 @@ Ruby has the "gem" command to install/uninstall rubygems, and "bundler" to manag
 * npm (big surprise)
 * yarn (inherited the sins of npm, now has nothing to offer since npm has a lock file)
 
-I honestly do not know the semantics of most of the npm commands. They seem to alter package.json and package-lock.json willy nilly, or not at all (if you don't specify `-S`). Obviously "node_modules" is just awful, hundreds of MB of duplicated vendored dependencies for every project and pathological transitive dependencies. At leat [pnpm][pnpm] fixes this.
+I honestly do not know the semantics of most of the npm commands. They seem to alter package.json and package-lock.json willy nilly, or not at all (if you don't specify `-S`). Obviously "node_modules" is just awful, hundreds of MB of duplicated vendored dependencies for every project and pathological transitive dependencies. At least [pnpm][pnpm] fixes this.
 
 Also what should be a dependency vs a devDependency? This is unclear at best on most projects.
 

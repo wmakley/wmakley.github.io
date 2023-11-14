@@ -1,15 +1,19 @@
 ---
 layout: post
-title: "Building a cheap email fowarding service with Gmail and AWS CDK"
+title: "Building a cheap email forwarding service with Gmail and AWS CDK"
 date: 2020-07-01
 categories: ["aws", "consulting", "aws-cdk"]
 ---
 
+TODO: This blog post is entirely outdated, as I no longer use this stack. I use Zoho as a very cheap $1/month mailbox and SMTP server, and forward work emails to my personal ["Hey"][hey] account.
+
+--
+
 When you register a domain, you don't get email for free. One of the first decisions I had to make after purchasing the domain for this blog was where to host my email. Initially I went with [ProtonMail][protonmail], lured by relative low cost for a single custom domain and feeling paranoid about security.
 
-After using ProtonMail for two years, I have only one thing to say about it: The webapp is slow and clumsy. It's a great company otherwise, but this is a deal-breaker. They do offer POP and IMAP through a bridge, but it's not as though Apple Mail is a killer email reading experience either. I still prefer Gmail, in spite of the spying.
+After using ProtonMail for two years, I have only one thing to say about it: The webapp is slow and clumsy, and the encryption is pointless unless the recipient is also using ProtonMail. (This is always the downfall of encrypted messaging services.) They do offer POP and IMAP through a bridge, but it's not as though Apple Mail is a killer email reading experience either. I still prefer Gmail, in spite of the privacy and monopoly issues.
 
-I demoed and priced out other services, but didn't find anything that great except ["Hey"][hey]. Unfortunately, "Hey" is too expensive for one email address, and I need a custom domain.
+I demoed and priced out other services, but didn't find anything that great except ["Hey"][hey].
 
 ## Brainwave
 
